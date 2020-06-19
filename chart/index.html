@@ -2,20 +2,20 @@
 
 <html lang ="en" dir ="ltr"> <!-- language = english, direction = left to right. helpt zoekmachines -->
 
-	<head>
+	<head> <!-- meta data, wordt niet weergegeven op pagina -->
 		<meta charset="uft-8"> <!-- Unicode Transformation Format, kan vrijwel elk symbool maken -->
 		<title>Dashboard</title> <!-- titel van de pagina -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!-- inporteerd bootstrap -->
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> <!-- inporteerd chart.js -->
 			
-			<style>
+			<style> /* css stylesheet */
 
-			body {background-color: white;}
+			body {background-color: white;} /* achtergrond */
 			
-			div.h1{
-				position: absolute;
-				width: 486.19px;
-				height: 18.22px;
+			div.h1{							/* deel dat wordt gestyled door onderstaanden, dit wordt toe gepast op wat in de body staat*/
+				position: absolute;			/* absolute geeft aan waar het staat vanuit de linker boven hoek */
+				width: 486.19px;			/* deze gegevens heb ik uit het figma design gehaald*/
+				height: 18.22px;			/* bovenstaande geldt voor elke volgende div.x statment*/
 				left: 202px;
 				top: 64px;
 				font-family: SF Pro Display;
@@ -192,28 +192,26 @@
 				box-sizing: border-box;
 				box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
 				border-radius: 10px;
-			}
-
-
+			} /* bovenstaande opmerking houdt op /* 
 
 			</style>
 
 	</head>
 	
-	<body>
-		<div class="h1">Goedemorgen, dhr. van der Meulen</div> <!-- titel op de pagina -->
-		<div class="regtangle"></div>
-		<div class="image"><img src="AH64.png" alt="Apache AH-64" width="420" height="220"></div>
-		<div class="p">Vandaag werkt u aan toestel</div>
-		<div class="h2">AH64_Q-10</div>
-		<div class="h3">Hangar 3</div>
-		<div class="frame"></div>
-		<div class="insideframe">Ga naar onderhoud in de splitweergave</div>
-		<div class="container1"></div>
+	<body> <!-- wordt weergegeven op pagina -->
+		<div class="h1">Goedemorgen, dhr. van der Meulen</div> <!-- titel op de pagina, divs wordt aan deze en onderstaande toegevoegd -->
+		<div class="regtangle"></div> <!-- eerste blok met border -->
+		<div class="image"><img src="AH64.png" alt="Apache AH-64" width="420" height="220"></div> <!-- foto apache -->
+		<div class="p">Vandaag werkt u aan toestel</div> <!-- tekst -->
+		<div class="h2">AH64_Q-10</div> <!-- tekst -->
+		<div class="h3">Hangar 3</div> <!-- tekst -->
+		<div class="frame"></div> <!-- blauwe knop -->
+		<div class="insideframe">Ga naar onderhoud in de splitweergave</div> <!-- tekst -->
+		<div class="container1"></div> <!-- border eerste grafiek -->
 		<div class="chart-container1"><canvas id="dougnutchart"></canvas></div> <!-- maakt canavas met het id 'doughnutchart' -->
-		<div class="container3"></div>
+		<div class="container3"></div> <!-- border tweede grafiek -->
 		<div class="chart-container2"><canvas id="barchart"></canvas></div> <!-- maakt canavas met het id 'barchart' -->
-		<div class="container2"></div>
+		<div class="container2"></div> <!-- border derde grafiek -->
 		<div class="chart-container3"><canvas id="doughnutchart2"></canvas></div> <!-- maakt canavas met het id 'doughnutchart2' -->
 		<script src="script.js"></script> <!-- inporteerd script.js -->
 	</body>

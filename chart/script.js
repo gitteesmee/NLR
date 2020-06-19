@@ -9,7 +9,7 @@ let myChart1 = document.getElementById("dougnutchart").getContext('2d'); // voor
 let chart1 = new Chart(myChart1, { // nieuwe grafiek wordt gemaakt
 	type:'doughnut', // het type is donut
 	data: { // de data wordt hier ingeladen uit hierboven
-		labels: labels1,
+		labels: labels1, 
 		datasets: [{
 			data: data1,
 			backgroundColor: colors1
@@ -19,7 +19,7 @@ let chart1 = new Chart(myChart1, { // nieuwe grafiek wordt gemaakt
 			title: { 
 				text: "Onderhoudstypes vandaag", // dit is de titel van de grafiek
 				display: true, // de titel wordt laten zien
-				fontFamily: 'SF Pro Text'
+				fontFamily: 'SF Pro Text' // in het lettertype SF Pro Text, als dat niet gevonden kan worden in een lettertype wat daar op lijkt
 		}
 		
 	}
@@ -47,7 +47,7 @@ let chart2 = new Chart(myChart2, { // nieuwe grafiek wordt gemaakt
 		title: {
 			text: "Historie van 150 uur onderhoud toestel", // dit is de titel van de grafiek
 				display: true, // de titel wordt laten zien
-				fontFamily: 'SF Pro Text'
+				fontFamily: 'SF Pro Text' // in het lettertype SF Pro Text, als dat niet gevonden kan worden in een lettertype wat daar op lijkt
 
 	}
 }
@@ -76,10 +76,9 @@ let chart3 = new Chart(myChart3, { // nieuwe grafiek wordt gemaakt
 		title: {
 			text: "Percentage geplande reperatie", // dit is de titel van de grafiek
 				display: true, // de titel wordt laten zien
-				fontFamily: 'SF Pro Text'
+				fontFamily: 'SF Pro Text' // in het lettertype SF Pro Text, als dat niet gevonden kan worden in een lettertype wat daar op lijkt
 	}
 }
-
 
 
 });
