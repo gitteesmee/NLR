@@ -16,12 +16,13 @@ let chart1 = new Chart(myChart1, { // nieuwe grafiek wordt gemaakt
 		}]
 	},
 	options:{ // hier worden de opties aangegeven voor de grafiek
-		title: { 
-			text: "Onderhoudstypes vandaag", // dit is de titel van de grafiek
-			display: true // de titel wordt laten zien
+			title: { 
+				text: "Onderhoudstypes vandaag", // dit is de titel van de grafiek
+				display: true, // de titel wordt laten zien
+				fontFamily: 'SF Pro Text'
 		}
+		
 	}
-
 
 });
 
@@ -43,11 +44,13 @@ let chart2 = new Chart(myChart2, { // nieuwe grafiek wordt gemaakt
 		}]
 	},
 	options:{ // hier worden de opties aangegeven voor de grafiek
-		title: { 
+		title: {
 			text: "Historie van 150 uur onderhoud toestel", // dit is de titel van de grafiek
-			display: true // de titel wordt laten zien
-		}
+				display: true, // de titel wordt laten zien
+				fontFamily: 'SF Pro Text'
+
 	}
+}
 
 
 });
@@ -70,11 +73,13 @@ let chart3 = new Chart(myChart3, { // nieuwe grafiek wordt gemaakt
 		}]
 	},
 	options:{ // hier worden de opties aangegeven voor de grafiek
-		title: { 
+		title: {
 			text: "Percentage geplande reperatie", // dit is de titel van de grafiek
-			display: true // de titel wordt laten zien
-		}
+				display: true, // de titel wordt laten zien
+				fontFamily: 'SF Pro Text'
 	}
+}
+
 
 
 });
