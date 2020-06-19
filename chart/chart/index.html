@@ -1,0 +1,219 @@
+<! DOCTYPE html> <!-- document type html -->
+
+<html lang ="en" dir ="ltr"> <!-- language = english, direction = left to right. helpt zoekmachines -->
+
+	<head> <!-- meta data, wordt niet weergegeven op pagina -->
+		<meta charset="uft-8"> <!-- Unicode Transformation Format, kan vrijwel elk symbool maken -->
+		<title>Dashboard</title> <!-- titel van de pagina -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!-- inporteerd bootstrap -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> <!-- inporteerd chart.js -->
+			
+			<style> /* css stylesheet */
+
+			body {background-color: white;} /* achtergrond */
+			
+			div.h1{							/* deel dat wordt gestyled door onderstaanden, dit wordt toe gepast op wat in de body staat*/
+				position: absolute;			/* absolute geeft aan waar het staat vanuit de linker boven hoek */
+				width: 486.19px;			/* deze gegevens heb ik uit het figma design gehaald*/
+				height: 18.22px;			/* bovenstaande geldt voor elke volgende div.x statment*/
+				left: 202px;
+				top: 64px;
+				font-family: SF Pro Display;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 28px;
+				line-height: 33px;
+				letter-spacing: 0.87px;
+				color: #000000;
+			}
+
+			div.h2{
+				position: absolute;
+				width: 170px;
+				height: 56px;
+				left: calc(50% - 160px/2 + 157px);
+				top: 206px;
+				font-family: SF Pro Display;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 28px;
+				line-height: 33px;
+				letter-spacing: 0.87px;
+				color: #004D7D;
+			}
+
+			div.h3{
+				position: absolute;
+				width: 100px;
+				height: 24px;
+				left: calc(50% - 87px/2 + 120.5px);
+				top: 236px;
+				font-family: SF Pro Display;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 24px;
+				letter-spacing: 0.75px;
+				color: #004D7D;
+			}
+
+			div.p{
+				position: absolute;
+				width: 226px;
+				height: 22px;
+				left: calc(50% - 226px/2 + 189px);
+				top: 178px;
+				font-family: SF Pro Text;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 17px;
+				line-height: 22px;
+				text-align: left;
+				letter-spacing: -0.408px;
+				color: #000000;
+			}
+
+			div.chart-container1{
+				position: absolute;
+				height: 200px;
+				width:440;
+				left: 202px;
+				top: 414px;
+			}
+
+			div.chart-container2{
+				position: absolute;
+				width: 891px;
+				height: 461px;
+				left: 202px;
+				top: 762px;
+			}
+
+			div.chart-container3{
+				position: absolute;
+				width: 420px;
+				height: 298px;
+				left: 673px;
+				top: 414px;
+			}
+
+			div.image{
+				position: absolute;
+				width: 420px;
+				height: 220px;
+				left: 202px;
+				top: 146px;
+
+				background: url(AH64D_Longbow_Apache_-_Duxford_Autumn_Airshow_2010_(modified).jpg);
+				border: 0.5px solid #B8B8B8;
+				box-sizing: border-box;
+				border-radius: 8px 0px 0px 8px;
+			}
+
+			div.regtangle{
+				position: absolute;
+				width: 891px;
+				height: 220px;
+				left: 202px;
+				top: 146px;
+
+				background: #FFFFFF;
+				border: 1.5px solid #CCCCCC;
+				box-sizing: border-box;
+				box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+				border-radius: 10px;
+			}
+
+			div.frame{
+				display: flex;
+				flex-direction: row;
+				padding: 15px 30px;
+				position: absolute;
+				width: 312px;
+				height: 48px;
+				left: calc(50% - 312px/2 + 227px);
+				top: 285px;
+				background: #004D7D;
+				border: 0.5px solid #004D7D;
+				box-sizing: border-box;
+				border-radius: 50px;
+			}
+
+			div.insideframe{
+				position: absolute;
+				width: 252px;
+				height: 18px;
+				left: 698px;
+				top: 300px;
+				font-family: SF Pro Text;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 13px;
+				line-height: 18px;
+				text-align: center;
+				letter-spacing: -0.078px;
+				color: #FFFFFF;
+			}
+
+			div.container1{
+				position: absolute;
+				width: 420px;
+				height: 298px;
+				left: 202px;
+				top: 414px;
+				background: #FFFFFF;
+				border: 1.5px solid #CCCCCC;
+				box-sizing: border-box;
+				box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+				border-radius: 10px;
+			}
+
+			div.container2{
+				position: absolute;
+				width: 420px;
+				height: 298px;
+				left: 673px;
+				top: 414px;
+				background: #FFFFFF;
+				border: 1.5px solid #CCCCCC;
+				box-sizing: border-box;
+				box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+				border-radius: 10px;
+			}
+
+			div.container3{
+				position: absolute;
+				width: 891px;
+				height: 461px;
+				left: 202px;
+				top: 762px;
+				background: #FFFFFF;
+				border: 1.5px solid #CCCCCC;
+				box-sizing: border-box;
+				box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+				border-radius: 10px;
+			} /* bovenstaande opmerking houdt op /* 
+
+			</style>
+
+	</head>
+	
+	<body> <!-- wordt weergegeven op pagina -->
+		<div class="h1">Goedemorgen, dhr. van der Meulen</div> <!-- titel op de pagina, divs wordt aan deze en onderstaande toegevoegd -->
+		<div class="regtangle"></div> <!-- eerste blok met border -->
+		<div class="image"><img src="AH64.png" alt="Apache AH-64" width="420" height="220"></div> <!-- foto apache -->
+		<div class="p">Vandaag werkt u aan toestel</div> <!-- tekst -->
+		<div class="h2">AH64_Q-10</div> <!-- tekst -->
+		<div class="h3">Hangar 3</div> <!-- tekst -->
+		<div class="frame"></div> <!-- blauwe knop -->
+		<div class="insideframe">Ga naar onderhoud in de splitweergave</div> <!-- tekst -->
+		<div class="container1"></div> <!-- border eerste grafiek -->
+		<div class="chart-container1"><canvas id="dougnutchart"></canvas></div> <!-- maakt canavas met het id 'doughnutchart' -->
+		<div class="container3"></div> <!-- border tweede grafiek -->
+		<div class="chart-container2"><canvas id="barchart"></canvas></div> <!-- maakt canavas met het id 'barchart' -->
+		<div class="container2"></div> <!-- border derde grafiek -->
+		<div class="chart-container3"><canvas id="doughnutchart2"></canvas></div> <!-- maakt canavas met het id 'doughnutchart2' -->
+		<script src="script.js"></script> <!-- inporteerd script.js -->
+	</body>
+
+</html>
