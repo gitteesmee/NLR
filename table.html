@@ -1,9 +1,9 @@
-<html>
+﻿<html>
 <style>
     table {
-        font-family: Arial, sans-serif; /*Font of table*/
+        font-family: Arial, sans-serif; /*Lettertype*/
         border-collapse: collapse;
-        width: 100%; /*Table gets 100% of the screen*/
+        width: 100%; /*Tabel krijgt 100% van het schrem*/
     }
 
     td, th {
@@ -12,22 +12,22 @@
     }
 
     th {
-        font-weight: bold; /* Bold font*/
-        text-transform: uppercase; /*Chapslock on font*/
+        font-weight: bold; /* Bold lettertype op table header*/
+        text-transform: uppercase; /*Chapslock op table header*/
     }
 
     tr:nth-child(even) {
-        background-color: #dddddd; /*Background color table*/
+        background-color: #dddddd; /*Achtergrond kleur table*/
     }
 
     tr:hover{
         background-color: black;
-        color: white; /*Hover effect on the table rows*/
+        color: white; /*Hover effect op de table rows*/
     }
 </style>
 
-<script>let sortDirection = false;
-    let jetData = [
+<script>let sortDirection = false; 
+    let jetData = [ 
         { tail: 'AH64_Q-10', ata: 53, subata: 53, unscheduledremoval: 'no', maintenance: 'M1', notification: 'M2', ttsn: 1000, workorder: 10224410, involvedlocation: 'AH64_Q - 10_53' },
         { tail: 'AH64_Q-10', ata: 53, subata: 54, unscheduledremoval: 'no', maintenance: 'A4', notification: 'B5', ttsn: 1100, workorder: 10224411, involvedlocation: 'AH64_Q - 10_53' },
         { tail: 'AH64_Q-10', ata: 53, subata: 57, unscheduledremoval: 'yes', maintenance: 'B2', notification: 'H2', ttsn: 500, workorder: 10224412, involvedlocation: 'AH64_Q - 10_53' },
@@ -39,7 +39,7 @@
         { tail: 'AH64_Q-10', ata: 28, subata: 89, unscheduledremoval: 'yes', maintenance: 'M1', notification: 'T9', ttsn: 200, workorder: 10224418, involvedlocation: 'AH64_Q - 10_28' },
         { tail: 'AH64_Q-10', ata: 33, subata: 45, unscheduledremoval: 'no', maintenance: 'A4', notification: 'N8', ttsn: 1000, workorder: 10224419, involvedlocation: 'AH64_Q - 10_33' },
 
-        // All the data injected in the table
+        // maakt alle data aan
 
     ];
 
@@ -61,6 +61,8 @@
         tableBody.innerHTML = dataHtml;
     }
 
+    // laadt alle data in
+
     function sortColumn(columnName) {
         const dataType = typeof jetData[0][columnName];
         sortDirection = !sortDirection;
@@ -74,11 +76,15 @@
 
     }
 
+    // sorteert data
+
     function sortNumberColumn(sort, columnName) {
         jetData = jetData.sort((t1, t2) => {
             return sort ? t1[columnName] - t2[columnName] : t2[columnName] - t1[columnName]
         });
     }
+
+    // draait de data om; opvolgend of afnemend
 
     </script>
 
@@ -87,20 +93,20 @@
         <thead>
             <tr>
                 <th>tail</th>
-                <th onclick="sortColumn('ata')">ata</th>
-                <th onclick="sortColumn('subata')">subata</th>
+                <th onclick="sortColumn('ata')">ata</th> <!-- kan gesorteerd worden -->
+                <th onclick="sortColumn('subata')">subata</th> <!-- kan gesorteerd worden -->
                 <th>unscheduled removal</th>
                 <th>maintenance type</th>
-                <th>notification type</th>
-                <th onclick="sortColumn('ttsn')">ttsn</th>
-                <th onclick="sortColumn('workorder')">workorder</th>
+                <th>notification type</th> 
+                <th onclick="sortColumn('ttsn')">ttsn</th> <!-- kan gesorteerd worden -->
+                <th onclick="sortColumn('workorder')">workorder</th> <!-- kan gesorteerd worden -->
                 <th>involved location</th>
             </tr>
         </thead>
 
         <tbody id="tableData"></tbody>
     </table>
-    <!-- Creates table head into tableData -->
+    <!-- Maakt table heads in tableData -->
 
     </body>
 
